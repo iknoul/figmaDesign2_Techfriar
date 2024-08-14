@@ -4,21 +4,43 @@
     box-sizing: border-box;
     font-family: Inter;
 }
+*::-webkit-scrollbar {
+    display: none;
+}
 main{
-    width:  1440px;
-    height: 1019px;
+    width:  100%;
+    height: auto;
     display: flex;
 }
+
+#menuBarIcon{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 5px;
+    left: 10px;
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: #0F1738;
+    border: 1px solid #1E1F21;
+}
+#menuBarIcon:hover{
+    background-color: #5e678b;
+}
 .container1{
-    width: 293px;
-    height: 100%;
+    /* width: 20.35%; */
+    height: auto;
     display: flex;
     flex-direction: column;
+    padding-bottom: 220px;
     color: white;
     background-color: #0F1738;
     position: relative;
 }
-.container1 .head{
+.container1 .head, .mainHead{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -26,11 +48,14 @@ main{
     padding-bottom: 6px;
     width: 100%;
 }
-.container1 .menuItemsTop, .container1 .menuItemsBottom{
+.mainHead{
+    display: none;
+}
+.container1 .menuItemsTop, .container1 .menuItemsBottom, .container1 .dropdown-content{
     padding: 0 45px 0 19px ;
 }
 
-.container1 .menuItem{
+.container1 .menuItem, .container1 .dropdown-content a{
     height: 44px;
     padding: 10px;
     margin: 10px 0;
@@ -44,7 +69,34 @@ main{
     text-align: left;
 
 }
-.container1 .menuItem:hover{
+.dropdown-content {
+    display: none; 
+    /* Initially hidden */
+    padding-left: 20px; /* Indentation for dropdown items */
+    border-left: 2px solid #ccc;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 0;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Active State: Show Dropdown */
+#myBusines.active + .dropdown-content
+{
+    display: block;
+}
+#finance.active + .dropdown-content
+{
+    display: block;
+}
+.container1 .menuItem:hover, .dropdown-content a:hover{
     background-color: #1A213F;
 }
 .container1 .menuItemsBottom .settingsIcon{
@@ -64,39 +116,44 @@ main{
 }
 .menuItemsBottom{
     position: absolute;
-    bottom: 41px;
+    bottom: 3.9%;
 }
 .container2{
-    width: 423px;
+    width: 29.4%;
     height: 100%;
     padding: 40px;
     background-color: #F8F9FF;
 }
 .welcomeText{
-    width: Hug (313px)px;
-    height: Hug (58px)px;
+    width:  100%;
+    height: 58px;
+    font-weight: 400;
     margin-bottom: 32px;
 }
 .goodMorning{
     display: flex;
     gap: 20px;
+    color: #1E1F21;
+   
 }
 .goodMorning h1{
-    font-family: Inter;
-    font-size: 26px;
     font-weight: 400;
+    font-size: 26px;
     line-height: 28.6px;
     text-align: left;
 }
+#name{
+    font-weight: 500;
+}
 .welcomeText h2{
-    font-family: Inter;
+    color: #6A6A6D;
     font-size: 14px;
     font-weight: 400;
     line-height: 23.8px;
     text-align: left;
 }
 .documentsNote{
-    width: 343px;
+    width: 100%;
     height: 201px;
     display: flex;
     align-items: end;
@@ -104,7 +161,7 @@ main{
     margin-bottom: 32px;
 }
 .documentsContainer{
-    width: 343px;
+    width: 100%;
     height: 182px;
     padding-top: 26px;
     display: flex;
@@ -126,10 +183,9 @@ main{
     height: 31px;
 }
 .textTop{
-    width: 162px;
+    width: 47.37%;
     height: 46px;
     margin-left: 118px;
-    font-family: Inter;
     font-size: 14px;
     font-weight: 300;
     line-height: 18.2px;
@@ -137,7 +193,6 @@ main{
 
 }
 .textTop strong{
-    font-family: Inter;
     font-size: 14px;
     font-weight: 500;
     line-height: 18.2px;
@@ -175,29 +230,37 @@ main{
 }
 
 .textBottom p{
-    width: 219px;
+    width: 64.04%;
     height: 36px;
-    top: 271px;
-    left: 356px;
-    gap: 0px;
-    opacity: 0px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.2px;
+    text-align: left;
+
 
 }
+.textBottom span{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18.2px;
+    text-align: left;
+}
 .applications{
-    width: 343px;
+    width: 100%;
     height: 173px;
     background: linear-gradient(105.84deg, #263A8B -1.73%, #1A213F 120.63%);
     border-radius: 16px;
-    border: 1px solid #DFE4FF;
     margin-bottom: 57px;
+    border: 1px solid #DFE4FF;
     opacity: 0px;
     padding-left: 15px;
+    padding-right: 10px ;
     display: flex;
     align-items: center;
     gap: 27.98px;
 }
 .applications ul{
-    
+ 
     font-family: Inter;
     font-size: 13px;
     font-weight: 400;
@@ -210,11 +273,10 @@ main{
 
 }
 .applications li{
-    width: Hug (87px)px;
+    width: Hug (25.35%)px;
     height: Hug (13px)px;
     padding: 8px 0;
     opacity: 0px;
-
 }
 #orangeLi{
     list-style-image: url(./icons/Ellipse_orange.svg);
@@ -226,7 +288,7 @@ main{
     list-style-image: url(./icons/Ellipse_green.svg);
 }
 .activityBox{
-    width: 361px;
+    width: 100%;
     height: 155px;
     display: flex;
     margin-bottom: 48px;
@@ -241,7 +303,6 @@ main{
 }
 .activityBox a{
     
-    font-family: Inter;
     font-size: 14px;
     font-weight: 500;
     line-height: 19.6px;
@@ -249,7 +310,7 @@ main{
 
 }
 .activityBox h1{
-    font-family: Inter;
+
     font-size: 22px;
     font-weight: 500;
     line-height: 22px;
@@ -257,7 +318,6 @@ main{
 }
 .activityBox .viewAll p{
 
-    font-family: Inter;
     font-size: 14px;
     font-weight: 400;
     line-height: 14px;
@@ -265,10 +325,8 @@ main{
 
 }
 .activityBox .activities{
-    width: 361px;
+    padding-right: 16px;
     height: 81px;
-    top: 667px;
-    left: 333px;
     gap: 0px;
     border: 1px;
     display: flex;   
@@ -285,7 +343,6 @@ main{
     margin-bottom: 6px;
 }
 .activityBox .activities .singleActivity p{
-    font-family: Inter;
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
@@ -300,6 +357,7 @@ main{
 
 }
 .container3{
+    /* width: 50.27%; */
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -326,13 +384,28 @@ main{
     line-height: 22px;
     text-align: left;
 }
-
+.container3 .navigation{
+    display: flex;
+    gap: 24px;
+    border-bottom: 1px solid #CECED1;
+}
+.container3 .navigation p:hover{
+    border-bottom: 2px solid #0F1738;
+}
+#myTasks{
+    border-bottom: 2px solid #0F1738;
+}
+.container3 .navigation p{
+    padding-bottom: 10px;
+}
 .task-table {
-    width: 644px;
+    width: 100%;
     border-spacing: 0;
     border-radius: 8px 8px 10px 10px;
-    font-family: Inter;
     text-align: left;
+}
+.container3 .documentData{
+    display: none;
 }
 .task-table thead{ 
     height: 47px;
@@ -342,6 +415,9 @@ main{
     color:#6A6A6D;
     background: #F8F9FC;
 
+}
+.task-table thead div{
+    padding-right: 10px;
 }
 .task-table thead th{
     border-bottom: 1px solid #E5E9FF;
@@ -383,11 +459,23 @@ main{
 .task-table td:last-child,th:last-child{
     padding-right: 20px;
 }
-.task-table td:first-child p{
-    width: 148px;   
+.task-table td:first-child{
+    width: 33%;
 }
 .task-table td:first-child div{
-    padding-right: 60px;   
+   width: 100%;   
+}
+.task-table td:first-child p{
+    width: 100%;   
+}
+.task-table td:first-child div{
+    padding-right: 60px;  
+    display: -webkit-box; /* Required for the multi-line truncation */
+    -webkit-box-orient: vertical; /* Defines the box orientation as vertical */
+    -webkit-line-clamp: 3; /* Limits the text to 2 lines */
+    overflow: hidden; /* Hides the overflow text */
+    text-overflow: ellipsis; /* Adds ellipses when text overflows */
+    
 }
 .task-table tr:last-child div {
     border-bottom: none;
@@ -406,29 +494,15 @@ main{
     height: 56px;
     border-bottom: 1px solid #CECED1;
 }
-.task-table .status{
+.task-table .status, .documentData .status{
     color: #6A6A6D;
     background-color: #F1F1F5;
     padding: 4px 12px;
     padding: 4px 12px 4px 12px;
-    gap: 10px;
     border-radius: 24px;
     border: 1px solid #CECED1;
-    opacity: 0px;
-
 }
 
-.container3 .navigation{
-    display: flex;
-    gap: 24px;
-    border-bottom: 1px solid #CECED1;
-}
-#myTasks{
-    border-bottom: 2px solid #0F1738;
-}
-.container3 .navigation p{
-    padding-bottom: 10px;
-}
 #table2 td:first-child p{
     width: auto;  
     font-family: Inter;
@@ -440,5 +514,179 @@ main{
 #table2 td div{
     height: 37.5px;
     padding-bottom: 17.5px;
+}
+
+@media screen and (max-width: 1255px) {
+    
+    .container1{
+        display: none !important;
+        position: absolute !important;
+        min-width: 220px !important;
+        min-height: 700px !important;
+        overflow-y:scroll !important;
+        z-index: 1000  !important;
+    }
+    .container2{
+        padding-left: 10px !important;
+        width: 40% !important;
+    }
+    .container3{
+        width: 60% !important;
+    }
+    .task-table td:first-child{
+        width: 27% !important;
+    }
+    .task-table tr td:first-child div{
+        padding-right: 20px !important;
+        
+    }
+    .task-table td:first-child div{
+        padding-right: 40px !important;  
+    }
+    .task-table td:last-child{
+        padding-right: 0 !important;
+    }
+   
+    #table2 td div{
+        padding-right: 10px !important;
+    }
+    
+}
+
+@media screen and (max-width: 1000px){
+    
+   .container2{
+        width: 50%;
+        height: auto;
+        padding-right: 16px;
+    }
+    .container3{
+        width: 50%;
+        background-color: white;
+        padding-right: 16px;
+    }
+    .container3 .navigation{
+        width: fit-content;
+    }
+    .container3 .task-table{
+        display: none;
+    }
+    .container3 .title, .container2 .title{
+        justify-content: space-between;
+
+    }
+    .container3 .documentData{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding-bottom: 32px;
+        border-bottom: 1px solid #E5E9FF;
+    }
+    #lastDocument1, #lastDocument2{
+        border-bottom: none;
+    }
+    .container3 .details{
+        display: flex;
+        gap: 32px;
+    }
+    .container3 .details .data, .container3 .statusDocument{
+        width: 163px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    .container3 .documentData p{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        text-align: left;
+        color: #1E1F21;
+        ;
+    }
+    .container3 .documentData .title{
+        color: #1E1F21;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 19.6px;
+        text-align: left;
+
+    }
+    .container3 .documentData .cateogoryTitle{
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 16.9px;
+        letter-spacing: 0.005em;
+        color: #6A6A6D;
+    }
+    .container3 .documentData .status{
+        width: fit-content;
+    }
+}
+@media screen and (max-width: 870px){
+    .container2{
+        width: 55% !important;
+    }
+    .container3{
+        width: 45% !important;
+    }
+}
+@media screen and (max-width: 610px) {
+    .dashboard{
+        width: 100%;
+        min-width: 290px !important;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin: auto;
+    }
+    .container1{
+        display: none !important;
+        position: absolute !important;
+        left: auto !important;
+        right: 0 !important;
+        top: 0;
+        min-width: 220px !important;
+        min-height: 700px !important;
+        margin-left: 0;
+        margin-right: 0;
+        overflow-y:scroll !important;
+        z-index: 1000  !important;
+    }    
+    .mainHead{
+        display: flex;
+        padding-top: 46px;
+        padding-left: 16px;
+        
+        justify-content: flex-start;
+        background-color: #1A213F;
+
+    }
+    #menuBarIcon{
+        top: 46px;
+        left: auto;
+        right: 22px;
+        border: none;
+        background-color: transparent;
+    }
+    #menuBarIcon:hover{
+        background-color: #253156;
+        transform: scale(0.99);
+    }
+    .container2{
+        width: 100% !important;
+        padding: 32px 16px 0 16px !important;
+    }
+    .container2 .goodMorning{
+        gap: 0 !important;
+    }
+    .container2 .activityBox .activities .singleActivity{
+        gap: 0px !important;
+    }
+    .container3{
+        width: 100% !important;
+        padding-left: 16px !important;
+        
+    }
+    
 }
 

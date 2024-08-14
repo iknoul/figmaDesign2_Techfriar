@@ -7,13 +7,18 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <main class="dashboard">
+        <img id="menuBarIcon" src="./icons/menuBarIcon.svg" alt="">
+        <div class="mainHead">
+            <img src="./icons/logo.svg" alt="logo">
+        </div>
         <div class="container1">
             <div class="head">
                 <img src="./icons/logo.svg" alt="logo">
-                <img src="./icons/menu_open.svg" alt="menu icon toggle">
+                <img id="menuIconToggle" src="./icons/menu_open.svg" alt="menu icon toggle">
             </div>
             <div class="menuItemsTop">
                 <div id="orgData" class="menuItem">
@@ -21,19 +26,29 @@
                     <p>Alphalinx inc.</p>
                     <img src="./icons/arrowDown.svg" alt="">
                 </div>
-                <div class="menuItem">
+                <div class="menuItem" class="menuIte">
                     <img src="./icons/dashboard_icon.svg" alt="dash board icon">
                     <p>Dashboard</p>
                 </div>
-                <div class="menuItem">
+                <div class="menuItem" id="myBusines">
                     <img src="./icons/my_business_icon.svg" alt="my business icon">
                     <p>My business</p>
                     <img src="./icons/dropDownIcon.svg" alt="drop down icon">
                 </div>
-                <div class="menuItem">
+                <div class="dropdown-content">
+                    <a href="#">My business 1</a>
+                    <a href="#">My business 2</a>
+                    <a href="#">My business 3</a>
+                </div>
+                <div class="menuItem" id="finance">
                     <img src="./icons/financial_icon.svg" alt="fiinancial resource icon">
                     <p>Financial Resources</p>
                     <img src="./icons/dropDownIcon.svg" alt="drop down icon">
+                </div>
+                <div class="dropdown-content">
+                    <a href="#">Finance sub 1</a>
+                    <a href="#">Finance sub 2</a>
+                    <a href="#">Finance sub 3</a>
                 </div>
                 <div class="menuItem">
                     <img src="./icons/mail_box_icon.svg" alt="mail box icon">
@@ -68,8 +83,8 @@
         <div class="container2">
             <div class="welcomeText">
                 <div class="goodMorning">
-                    <h1>Good morning, <strong>Emily!</strong></h1>
-                    <img src="./icons/hello.svg" alt=" waving">
+                    <h1>Good morning, <span id="name">Emily!</span></h1> 
+                    <img src="./icons/hello.svg" alt="">
                 </div>
                 <h2>welcome back!</h2>
             </div>
@@ -84,7 +99,7 @@
                         <p id="upToDate">up to date!</p>
                     </div>
                     <div class="textBottom">
-                        <p>You have 3 upcoming document updates in January.</p>
+                        <p>You have <span>3 upcoming</span> document updates in January.</p>
                         <img src="./icons/arrow_right_alt.svg" alt="">
                     </div>
                 
@@ -131,27 +146,27 @@
             <div class="activityBox">
                 <div class="viewAll">
                     <div class="title">
-                        <h1>Mailbox</h1>
+                        <h1>Legal compliance</h1>
                         <a href="./">View all</a>
                     </div>
-                    <p>Check on your all your mail in one go.</p>
+                    <p>Keep your requirements up to date.</p>
                 </div>
                 <div class="activities">
                     <div class="singleActivity">
                         <img src="./icons/activityTick.svg" alt="">
-                        <p>New</p>
+                        <p>Reminders</p>
                         <p id="activityCount">23</p>
                     </div>
                     <img src="./icons/verticalLine.svg" alt="vertical Line">
                     <div class="singleActivity">
                         <img src="./icons/activityPending.svg" alt="">
-                        <p>Requested</p>
+                        <p>In progress</p>
                         <p id="activityCount">23</p>
                     </div>
                     <img src="./icons/verticalLine.svg" alt="vertical Line">
                     <div class="singleActivity">
                         <img src="./icons/activityRemind.svg" alt="">
-                        <p>Action taken</p>
+                        <p>To approve</p>
                         <p id="activityCount">23</p>
                     </div>
        
@@ -167,6 +182,82 @@
                 <p id="myTasks">My tasks</p>
                 <p>Overdue</p>
                 <p>Assigned by me</p>
+            </div>
+            <div class="documentData">
+                <div class="title">
+                    <p>Update Tax Document for Alphalinx...</p>
+                </div>
+                <div class="details">
+                    <div class="data">
+                        <p class="cateogoryTitle">Category</p>
+                        <p>Compliance</p>
+                    </div>
+                    <div class="data">
+                        <p class="cateogoryTitle">Due date</p>
+                        <p>23/11/23</p>
+                    </div>
+                </div>
+                <div class="statusDocument">
+                    <p class="cateogoryTitle">Status</p>
+                    <p class="status">Request sent</p>
+                </div>
+            </div>
+            <div class="documentData">
+                <div class="title">
+                    <p>Update Tax Document for Alphalinx...</p>
+                </div>
+                <div class="details">
+                    <div class="data">
+                        <p class="cateogoryTitle">Category</p>
+                        <p>Compliance</p>
+                    </div>
+                    <div class="data">
+                        <p class="cateogoryTitle">Due date</p>
+                        <p>23/11/23</p>
+                    </div>
+                </div>
+                <div class="statusDocument">
+                    <p class="cateogoryTitle">Status</p>
+                    <p class="status">Request sent</p>
+                </div>
+            </div>
+            <div class="documentData">
+                <div class="title">
+                    <p>Update Tax Document for Alphalinx...</p>
+                </div>
+                <div class="details">
+                    <div class="data">
+                        <p class="cateogoryTitle">Category</p>
+                        <p>Compliance</p>
+                    </div>
+                    <div class="data">
+                        <p class="cateogoryTitle">Due date</p>
+                        <p>23/11/23</p>
+                    </div>
+                </div>
+                <div class="statusDocument">
+                    <p class="cateogoryTitle">Status</p>
+                    <p class="status">Request sent</p>
+                </div>
+            </div>
+            <div class="documentData" id="lastDocument1">
+                <div class="title">
+                    <p>Update Tax Document for Alphalinx...</p>
+                </div>
+                <div class="details">
+                    <div class="data">
+                        <p class="cateogoryTitle">Category</p>
+                        <p>Compliance</p>
+                    </div>
+                    <div class="data">
+                        <p class="cateogoryTitle">Due date</p>
+                        <p>23/11/23</p>
+                    </div>
+                </div>
+                <div class="statusDocument">
+                    <p class="cateogoryTitle">Status</p>
+                    <p class="status">Request sent</p>
+                </div>
             </div>
             <table class="task-table">
                 <thead>
@@ -207,6 +298,25 @@
             <div class="title">
                 <h1>Payment history</h1>
                 <a href="./">View all</a>
+            </div>
+            <div class="documentData" id="lastDocument2">
+                <div class="title">
+                    <p>Update Tax Document for Alphalinx...</p>
+                </div>
+                <div class="details">
+                    <div class="data">
+                        <p class="cateogoryTitle">Category</p>
+                        <p>Compliance</p>
+                    </div>
+                    <div class="data">
+                        <p class="cateogoryTitle">Due date</p>
+                        <p>23/11/23</p>
+                    </div>
+                </div>
+                <div class="statusDocument" >
+                    <p class="cateogoryTitle">Status</p>
+                    <p class="status">Request sent</p>
+                </div>
             </div>
             <table id="table2" class="task-table">
                 <thead>
