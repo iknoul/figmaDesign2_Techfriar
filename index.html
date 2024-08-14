@@ -26,6 +26,11 @@
                     <p>Alphalinx inc.</p>
                     <img src="./icons/arrowDown.svg" alt="">
                 </div>
+                <div class="dropdown-content">
+                    <a href="#">Org data 1</a>
+                    <a href="#">Org data 2</a>
+                    <a href="#">Org data 3</a>
+                </div>
                 <div class="menuItem" class="menuIte">
                     <img src="./icons/dashboard_icon.svg" alt="dash board icon">
                     <p>Dashboard</p>
@@ -174,150 +179,158 @@
             </div>
         </div>
         <div class="container3">
-            <div class="title">
+            <div class="titleMain">
                 <h1>Tasks</h1>
                 <a href="./">View all</a>
             </div>
             <div class="navigation">
-                <p id="myTasks">My tasks</p>
-                <p>Overdue</p>
-                <p>Assigned by me</p>
+                <p class="navItem" id="myTasks" data-target="myTaskData">My tasks</p>
+                <p class="navItem" id="overDue" data-target="overDueData">Overdue</p>
+                <p class="navItem" id="assignedByMe" data-target="assignedByMeData">Assigned by me</p>
             </div>
-            <div class="documentData">
-                <div class="title">
-                    <p>Update Tax Document for Alphalinx...</p>
-                </div>
-                <div class="details">
-                    <div class="data">
-                        <p class="cateogoryTitle">Category</p>
-                        <p>Compliance</p>
+            <div class="myTasks" id="myTaskData">
+                <div class="documentData">
+                    <div class="title">
+                        <p>Update Tax Document for Alphalinx...</p>
                     </div>
-                    <div class="data">
-                        <p class="cateogoryTitle">Due date</p>
-                        <p>23/11/23</p>
+                    <div class="details">
+                        <div class="data">
+                            <p class="cateogoryTitle">Category</p>
+                            <p>Compliance</p>
+                        </div>
+                        <div class="data">
+                            <p class="cateogoryTitle">Due date</p>
+                            <p>23/11/23</p>
+                        </div>
+                    </div>
+                    <div class="statusDocument">
+                        <p class="cateogoryTitle">Status</p>
+                        <p class="status">Request sent</p>
                     </div>
                 </div>
-                <div class="statusDocument">
-                    <p class="cateogoryTitle">Status</p>
-                    <p class="status">Request sent</p>
+                <div class="documentData">
+                    <div class="title">
+                        <p>Update Tax Document for Alphalinx...</p>
+                    </div>
+                    <div class="details">
+                        <div class="data">
+                            <p class="cateogoryTitle">Category</p>
+                            <p>Compliance</p>
+                        </div>
+                        <div class="data">
+                            <p class="cateogoryTitle">Due date</p>
+                            <p>23/11/23</p>
+                        </div>
+                    </div>
+                    <div class="statusDocument">
+                        <p class="cateogoryTitle">Status</p>
+                        <p class="status">Request sent</p>
+                    </div>
                 </div>
+                <div class="documentData">
+                    <div class="title">
+                        <p>Update Tax Document for Alphalinx...</p>
+                    </div>
+                    <div class="details">
+                        <div class="data">
+                            <p class="cateogoryTitle">Category</p>
+                            <p>Compliance</p>
+                        </div>
+                        <div class="data">
+                            <p class="cateogoryTitle">Due date</p>
+                            <p>23/11/23</p>
+                        </div>
+                    </div>
+                    <div class="statusDocument">
+                        <p class="cateogoryTitle">Status</p>
+                        <p class="status">Request sent</p>
+                    </div>
+                </div>
+                <div class="documentData" id="lastDocument1">
+                    <div class="title">
+                        <p>Update Tax Document for Alphalinx...</p>
+                    </div>
+                    <div class="details">
+                        <div class="data">
+                            <p class="cateogoryTitle">Category</p>
+                            <p>Compliance</p>
+                        </div>
+                        <div class="data">
+                            <p class="cateogoryTitle">Due date</p>
+                            <p>23/11/23</p>
+                        </div>
+                    </div>
+                    <div class="statusDocument">
+                        <p class="cateogoryTitle">Status</p>
+                        <p class="status">Request sent</p>
+                    </div>
+                </div>
+                <table class="task-table">
+                    <thead>
+                        <tr>
+                            <th><div>Task</div></th>
+                            <th><div>Category</div></th>
+                            <th><div>Due date</div></th>
+                            <th><div>Status</div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><div><p>Update Tax Document for Alphalinx...</p></div></td>
+                            <td><div><p>Compliance</p></div></td>
+                            <td><div><p>23/11/23</p></div></td>
+                            <td><div><span class="status">Request sent</span></div></td>
+                        </tr>
+                        <tr>
+                            <td><div><p>Update KYC document</p></div></td>
+                            <td><div><p>Compliance</p></div></td>
+                            <td><div><p>23/11/23</p></div></td>
+                            <td><div><span class="status">Request sent</span></div></td>
+                        </tr>
+                        <tr>
+                            <td><div><p>Add clearer photo for visa application</p></div></td>
+                            <td><div><p>Visa center</p></div></td>
+                            <td><div><p>23/11/23</p></div></td>
+                            <td><div><span class="status">Pending action</span></div></td>
+                        </tr>
+                        <tr>
+                            <td><div><p>Document not clear: please add new file</p></div></td>
+                            <td><div><p>Visa center</p></div></td>
+                            <td><div><p>23/11/23</p></div></td>
+                            <td><div><span class="status">Pending action</span></div></td>
+                        </tr>
+                    </tbody>
+                </table> 
             </div>
-            <div class="documentData">
-                <div class="title">
-                    <p>Update Tax Document for Alphalinx...</p>
-                </div>
-                <div class="details">
-                    <div class="data">
-                        <p class="cateogoryTitle">Category</p>
-                        <p>Compliance</p>
-                    </div>
-                    <div class="data">
-                        <p class="cateogoryTitle">Due date</p>
-                        <p>23/11/23</p>
-                    </div>
-                </div>
-                <div class="statusDocument">
-                    <p class="cateogoryTitle">Status</p>
-                    <p class="status">Request sent</p>
-                </div>
+            <div div class="myTasks" id="overDueData">
+                <img src="./icons/no_data.svg" alt="">
             </div>
-            <div class="documentData">
-                <div class="title">
-                    <p>Update Tax Document for Alphalinx...</p>
-                </div>
-                <div class="details">
-                    <div class="data">
-                        <p class="cateogoryTitle">Category</p>
-                        <p>Compliance</p>
-                    </div>
-                    <div class="data">
-                        <p class="cateogoryTitle">Due date</p>
-                        <p>23/11/23</p>
-                    </div>
-                </div>
-                <div class="statusDocument">
-                    <p class="cateogoryTitle">Status</p>
-                    <p class="status">Request sent</p>
-                </div>
+            <div div class="myTasks" id="assignedByMeData">
+                <img src="./icons/no_data.svg" alt="">
             </div>
-            <div class="documentData" id="lastDocument1">
-                <div class="title">
-                    <p>Update Tax Document for Alphalinx...</p>
-                </div>
-                <div class="details">
-                    <div class="data">
-                        <p class="cateogoryTitle">Category</p>
-                        <p>Compliance</p>
-                    </div>
-                    <div class="data">
-                        <p class="cateogoryTitle">Due date</p>
-                        <p>23/11/23</p>
-                    </div>
-                </div>
-                <div class="statusDocument">
-                    <p class="cateogoryTitle">Status</p>
-                    <p class="status">Request sent</p>
-                </div>
-            </div>
-            <table class="task-table">
-                <thead>
-                    <tr>
-                        <th><div>Task</div></th>
-                        <th><div>Category</div></th>
-                        <th><div>Due date</div></th>
-                        <th><div>Status</div></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><div><p>Update Tax Document for Alphalinx...</p></div></td>
-                        <td><div><p>Compliance</p></div></td>
-                        <td><div><p>23/11/23</p></div></td>
-                        <td><div><span class="status">Request sent</span></div></td>
-                    </tr>
-                    <tr>
-                        <td><div><p>Update KYC document</p></div></td>
-                        <td><div><p>Compliance</p></div></td>
-                        <td><div><p>23/11/23</p></div></td>
-                        <td><div><span class="status">Request sent</span></div></td>
-                    </tr>
-                    <tr>
-                        <td><div><p>Add clearer photo for visa application</p></div></td>
-                        <td><div><p>Visa center</p></div></td>
-                        <td><div><p>23/11/23</p></div></td>
-                        <td><div><span class="status">Pending action</span></div></td>
-                    </tr>
-                    <tr>
-                        <td><div><p>Document not clear: please add new file</p></div></td>
-                        <td><div><p>Visa center</p></div></td>
-                        <td><div><p>23/11/23</p></div></td>
-                        <td><div><span class="status">Pending action</span></div></td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="titleMain">
+            <h1>Payment history</h1>
+            <a href="./">View all</a>
+        </div>
+        <div class="documentData" id="lastDocument2">
             <div class="title">
-                <h1>Payment history</h1>
-                <a href="./">View all</a>
+                <p>Update Tax Document for Alphalinx...</p>
             </div>
-            <div class="documentData" id="lastDocument2">
-                <div class="title">
-                    <p>Update Tax Document for Alphalinx...</p>
+            <div class="details">
+                <div class="data">
+                    <p class="cateogoryTitle">Category</p>
+                    <p>Compliance</p>
                 </div>
-                <div class="details">
-                    <div class="data">
-                        <p class="cateogoryTitle">Category</p>
-                        <p>Compliance</p>
-                    </div>
-                    <div class="data">
-                        <p class="cateogoryTitle">Due date</p>
-                        <p>23/11/23</p>
-                    </div>
-                </div>
-                <div class="statusDocument" >
-                    <p class="cateogoryTitle">Status</p>
-                    <p class="status">Request sent</p>
+                <div class="data">
+                    <p class="cateogoryTitle">Due date</p>
+                    <p>23/11/23</p>
                 </div>
             </div>
+            <div class="statusDocument" >
+                <p class="cateogoryTitle">Status</p>
+                <p class="status">Request sent</p>
+            </div>
+        </div>
             <table id="table2" class="task-table">
                 <thead>
                     <tr>

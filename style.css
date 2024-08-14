@@ -52,6 +52,7 @@ main{
     display: none;
 }
 .container1 .menuItemsTop, .container1 .menuItemsBottom, .container1 .dropdown-content{
+    cursor: pointer;
     padding: 0 45px 0 19px ;
 }
 
@@ -88,6 +89,10 @@ main{
 }
 
 /* Active State: Show Dropdown */
+#orgData.active + .dropdown-content
+{
+    display: block;
+}
 #myBusines.active + .dropdown-content
 {
     display: block;
@@ -159,6 +164,7 @@ main{
     align-items: end;
     position: relative;
     margin-bottom: 32px;
+    overflow-y: hidden;
 }
 .documentsContainer{
     width: 100%;
@@ -360,12 +366,14 @@ main{
     /* width: 50.27%; */
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    /* gap: 20px; */
     padding: 40px;
 }
-.container3 .title{
+.container3 .titleMain{
     display: flex;
     padding-bottom: 6px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     gap: 12px;
 }
 .container3 a{
@@ -386,17 +394,39 @@ main{
 }
 .container3 .navigation{
     display: flex;
+    cursor: pointer;
     gap: 24px;
     border-bottom: 1px solid #CECED1;
 }
 .container3 .navigation p:hover{
     border-bottom: 2px solid #0F1738;
 }
-#myTasks{
-    border-bottom: 2px solid #0F1738;
+
+.container3 .myTasks{
+    width: 100%;
+    flex-direction: column;
+}
+#myTaskData{
+    margin-top: 32px;
+}
+.container3 #overDueData, .container3 #assignedByMeData{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.container3 img{
+    width: 100px;
+    height: 100px;
 }
 .container3 .navigation p{
     padding-bottom: 10px;
+}
+.container3  .navigation .navItem.active{
+    border-bottom: 2px solid #0F1738;
+
 }
 .task-table {
     width: 100%;
@@ -520,6 +550,7 @@ main{
     
     .container1{
         display: none !important;
+        margin: 0;
         position: absolute !important;
         min-width: 220px !important;
         min-height: 700px !important;
@@ -571,7 +602,7 @@ main{
     .container3 .task-table{
         display: none;
     }
-    .container3 .title, .container2 .title{
+    .container3 .titleMain, .container2 .title{
         justify-content: space-between;
 
     }
@@ -580,6 +611,7 @@ main{
         flex-direction: column;
         gap: 16px;
         padding-bottom: 32px;
+        padding-top: 32px;
         border-bottom: 1px solid #E5E9FF;
     }
     #lastDocument1, #lastDocument2{
@@ -631,6 +663,9 @@ main{
     }
 }
 @media screen and (max-width: 610px) {
+    html{
+    overflow-x: hidden;
+    }
     .dashboard{
         width: 100%;
         min-width: 290px !important;
