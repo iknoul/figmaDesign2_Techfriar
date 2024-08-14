@@ -18,7 +18,9 @@ document.querySelector('#menuBarIcon').addEventListener('click', function() {
 document.getElementById('menuIconToggle').addEventListener('click', function() {
     var navAnchors = document.querySelector('.container1');
     // Hide navigation when the back button is clicked
+    // Hiding type based on window width to reduce effects on other containers 
     var windowWidth = window.innerWidth;
+
     if(windowWidth>610){
         navAnchors.style.setProperty('margin-left', '-1000px', 'important');
         navAnchors.style.setProperty('margin-right', '1000px', 'important');
@@ -28,6 +30,8 @@ document.getElementById('menuIconToggle').addEventListener('click', function() {
         navAnchors.style.setProperty('display', 'none', 'important');
     }
 });
+
+// when side bar menu item class active, it shows sub menu
 document.querySelector('#myBusines').addEventListener('click', function() {
             this.classList.toggle('active');
 })
