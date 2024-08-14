@@ -6,98 +6,104 @@
     <meta name="description" content="Employee dashboard">
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
-    <link rel="stylesheet" href="style.css">
-    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./script/script.js" defer></script>
 </head>
 <body>
     <main class="dashboard">
-        <img id="menuBarIcon" src="./icons/menuBarIcon.svg" alt="">
+        <!-- menu bar and main head are absolute position values, no need to include in containers -->
+        <img id="menuBarIcon" src="./asset/icons/menuBarIcon.svg" alt="">
         <div class="mainHead">
-            <img src="./icons/logo.svg" alt="logo">
+            <img src="./asset/icons/logo.svg" alt="logo">
         </div>
+        <!-- side bar(menu) container -->
         <div class="container1">
             <div class="head">
-                <img src="./icons/logo.svg" alt="logo">
-                <img id="menuIconToggle" src="./icons/menu_open.svg" alt="menu icon toggle">
+                <img src="./asset/icons/logo.svg" alt="logo">
+                <img id="menuIconToggle" src="./asset/icons/menu_open.svg" alt="menu icon toggle">
             </div>
             <div class="menuItemsTop">
                 <div id="orgData" class="menuItem">
-                    <img src="./icons/company.svg" alt="company name">
+                    <img src="./asset/icons/company.svg" alt="company name">
                     <p>Alphalinx inc.</p>
-                    <img src="./icons/arrowDown.svg" alt="">
+                    <img src="./asset/icons/arrowDown.svg" alt="">
                 </div>
+                <!-- only shows the sub menu when #orgData menu item active -->
                 <div class="dropdown-content">
                     <a href="#">Org data 1</a>
                     <a href="#">Org data 2</a>
                     <a href="#">Org data 3</a>
                 </div>
                 <div class="menuItem" class="menuIte">
-                    <img src="./icons/dashboard_icon.svg" alt="dash board icon">
+                    <img src="./asset/icons/dashboard_icon.svg" alt="dash board icon">
                     <p>Dashboard</p>
                 </div>
                 <div class="menuItem" id="myBusines">
-                    <img src="./icons/my_business_icon.svg" alt="my business icon">
+                    <img src="./asset/icons/my_business_icon.svg" alt="my business icon">
                     <p>My business</p>
-                    <img src="./icons/dropDownIcon.svg" alt="drop down icon">
+                    <img src="./asset/icons/dropDownIcon.svg" alt="drop down icon">
                 </div>
+                <!-- only shows the sub menu when #myBusines menu item active -->
                 <div class="dropdown-content">
                     <a href="#">My business 1</a>
                     <a href="#">My business 2</a>
                     <a href="#">My business 3</a>
                 </div>
                 <div class="menuItem" id="finance">
-                    <img src="./icons/financial_icon.svg" alt="fiinancial resource icon">
+                    <img src="./asset/icons/financial_icon.svg" alt="fiinancial resource icon">
                     <p>Financial Resources</p>
-                    <img src="./icons/dropDownIcon.svg" alt="drop down icon">
+                    <img src="./asset/icons/dropDownIcon.svg" alt="drop down icon">
                 </div>
+                <!-- only shows the sub menu when #finance menu item active -->
                 <div class="dropdown-content">
                     <a href="#">Finance sub 1</a>
                     <a href="#">Finance sub 2</a>
                     <a href="#">Finance sub 3</a>
                 </div>
                 <div class="menuItem">
-                    <img src="./icons/mail_box_icon.svg" alt="mail box icon">
+                    <img src="./asset/icons/mail_box_icon.svg" alt="mail box icon">
                     <p>Mailbox</p>
                 </div>
                 <div class="menuItem">
-                    <img src="./icons/visa_center.svg" alt="vis center icon">
+                    <img src="./asset/icons/visa_center.svg" alt="vis center icon">
                     <p>Visa center</p>
                 </div>
                 <div class="menuItem">
-                    <img src="./icons/compliance.svg" alt="compliance icon">
+                    <img src="./asset/icons/compliance.svg" alt="compliance icon">
                     <p>Compliance</p>
                 </div>
             </div>
             <div class="menuItemsBottom">
                 <div class="menuItem">
-                    <img src="./icons/bell_icon.svg" alt="notification icon">
+                    <img src="./asset/icons/bell_icon.svg" alt="notification icon">
                     <p>Notifications</p>
                 </div>
                 <div class="menuItem">
-                    <img src="./icons/help_icon.svg" alt="Help center icon">
+                    <img src="./asset/icons/help_icon.svg" alt="Help center icon">
                     <p>Help Center</p>
-                    <img class="settingsIcon" src="./icons/menu_dot_icon.svg" alt="settings icon">
+                    <img class="settingsIcon" src="./asset/icons/menu_dot_icon.svg" alt="settings icon">
                 </div>
                 <div id="orgData" class="menuItem">
-                    <img src="./icons/j_icon.svg" alt="user icon">
+                    <img src="./asset/icons/j_icon.svg" alt="user icon">
                     <p>Jcobe James</p>
-                    <img class="settingsIcon" src="./icons/menu_dot_icon.svg" alt="settings icon">
+                    <img class="settingsIcon" src="./asset/icons/menu_dot_icon.svg" alt="settings icon">
                 </div>
             </div>
         </div>
         <div class="container2">
+            <!-- controlls the top welcome div -->
             <div class="welcomeText">
                 <div class="goodMorning">
                     <h1>Good morning, <span id="name">Emily!</span></h1> 
-                    <img src="./icons/hello.svg" alt="">
+                    <img src="./asset/icons/hello.svg" alt="">
                 </div>
                 <h2>welcome back!</h2>
             </div>
             <div class="documentsNote">
                 <div class="documentsContainer">
-                    <img id="documentsIcon" src="./icons/documentsIcon.svg" alt="">
-                    <img id="auto_awesome" src="./icons/auto_awesome.svg" alt="">
-                    <img id="centerAlignment" src="./icons/Line_41.svg" alt="">
+                    <img id="documentsIcon" src="./asset/icons/documentsIcon.svg" alt="">
+                    <img id="auto_awesome" src="./asset/icons/auto_awesome.svg" alt="">
+                    <img id="centerAlignment" src="./asset/icons/Line_41.svg" alt="">
                     <div class="textTop">
                         <p>All your <strong>documents</strong> are</p>
                         <p id="whiteSpace"></p>
@@ -105,13 +111,13 @@
                     </div>
                     <div class="textBottom">
                         <p>You have <span>3 upcoming</span> document updates in January.</p>
-                        <img src="./icons/arrow_right_alt.svg" alt="">
+                        <img src="./asset/icons/arrow_right_alt.svg" alt="">
                     </div>
                 
                 </div>
             </div>
             <div class="applications">
-                <img id="pieChart" src="./icons/pieChart.svg" alt="pie chart">
+                <img id="pieChart" src="./asset/icons/pieChart.svg" alt="pie chart">
                 <ul>
                     <li id="orangeLi">Incomplete</li>
                     <li id="redLi">Pending approval</li>
@@ -129,19 +135,19 @@
                 </div>
                 <div class="activities">
                     <div class="singleActivity">
-                        <img src="./icons/activityTick.svg" alt="">
+                        <img src="./asset/icons/activityTick.svg" alt="">
                         <p>New</p>
                         <p id="activityCount">23</p>
                     </div>
-                    <img src="./icons/verticalLine.svg" alt="vertical Line">
+                    <img src="./asset/icons/verticalLine.svg" alt="vertical Line">
                     <div class="singleActivity">
-                        <img src="./icons/activityPending.svg" alt="">
+                        <img src="./asset/icons/activityPending.svg" alt="">
                         <p>Requested</p>
                         <p id="activityCount">23</p>
                     </div>
-                    <img src="./icons/verticalLine.svg" alt="vertical Line">
+                    <img src="./asset/icons/verticalLine.svg" alt="vertical Line">
                     <div class="singleActivity">
-                        <img src="./icons/activityRemind.svg" alt="">
+                        <img src="./asset/icons/activityRemind.svg" alt="">
                         <p>Action taken</p>
                         <p id="activityCount">23</p>
                     </div>
@@ -158,19 +164,19 @@
                 </div>
                 <div class="activities">
                     <div class="singleActivity">
-                        <img src="./icons/activityTick.svg" alt="">
+                        <img src="./asset/icons/activityTick.svg" alt="">
                         <p>Reminders</p>
                         <p id="activityCount">23</p>
                     </div>
-                    <img src="./icons/verticalLine.svg" alt="vertical Line">
+                    <img src="./asset/icons/verticalLine.svg" alt="vertical Line">
                     <div class="singleActivity">
-                        <img src="./icons/activityPending.svg" alt="">
+                        <img src="./asset/icons/activityPending.svg" alt="">
                         <p>In progress</p>
                         <p id="activityCount">23</p>
                     </div>
-                    <img src="./icons/verticalLine.svg" alt="vertical Line">
+                    <img src="./asset/icons/verticalLine.svg" alt="vertical Line">
                     <div class="singleActivity">
-                        <img src="./icons/activityRemind.svg" alt="">
+                        <img src="./asset/icons/activityRemind.svg" alt="">
                         <p>To approve</p>
                         <p id="activityCount">23</p>
                     </div>
@@ -188,7 +194,9 @@
                 <p class="navItem" id="overDue" data-target="overDueData">Overdue</p>
                 <p class="navItem" id="assignedByMe" data-target="assignedByMeData">Assigned by me</p>
             </div>
+            <!-- this sets of taks will be shown when myTasks navigation active -->
             <div class="myTasks" id="myTaskData">
+                <!-- this documently styled table data will be shown when width reduces -->
                 <div class="documentData">
                     <div class="title">
                         <p>Update Tax Document for Alphalinx...</p>
@@ -265,6 +273,7 @@
                         <p class="status">Request sent</p>
                     </div>
                 </div>
+                <!-- this table data shown when have good width (>1000px) -->
                 <table class="task-table">
                     <thead>
                         <tr>
@@ -302,16 +311,19 @@
                     </tbody>
                 </table> 
             </div>
+            <!-- this sets of data be shown when over Due Data navigation active -->
             <div div class="myTasks" id="overDueData">
-                <img src="./icons/no_data.svg" alt="">
+                <img src="./asset/icons/no_data.svg" alt="">
             </div>
+            <!-- this sets of data be shown when assigned By Me Data navigation active -->
             <div div class="myTasks" id="assignedByMeData">
-                <img src="./icons/no_data.svg" alt="">
+                <img src="./asset/icons/no_data.svg" alt="">
             </div>
         <div class="titleMain">
             <h1>Payment history</h1>
             <a href="./">View all</a>
         </div>
+        <!-- this documently styled table data shown, when width is not enough for table data -->
         <div class="documentData" id="lastDocument2">
             <div class="title">
                 <p>Update Tax Document for Alphalinx...</p>
@@ -331,55 +343,56 @@
                 <p class="status">Request sent</p>
             </div>
         </div>
-            <table id="table2" class="task-table">
-                <thead>
-                    <tr>
-                        <th><div>Transaction ID</div></th>
-                        <th><div>Date of transaction</div></th>
-                        <th><div>Amount</div></th>
-                        <th><div>Description</div></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><div><p>#764657758</p></div></td>
-                        <td><div><p>23/01/19</p></div></td>
-                        <td><div><p>$5.99</p></div></td>
-                        <td><div><span class="status">Mailbox</span></div></td>
-                    </tr>
-                    <tr>
-                        <td><div><p>#764657758</p></div></td>
-                        <td><div><p>23/01/19</p></div></td>
-                        <td><div><p>$5.99</p></div></td>
-                        <td><div><span class="status">Registration (upgrade)</span></div></td>
-                    </tr>
-                    <tr>
-                        <td><div><p>#764657758</p></div></td>
-                        <td><div><p>23/01/19</p></div></td>
-                        <td><div><p>$5.99</p></div></td>
-                        <td><div><span class="status">Mailbox</span></div></td>
-                    </tr>
-                    <tr>
-                        <td><div><p>#764657758</p></div></td>
-                        <td><div><p>23/01/19</p></div></td>
-                        <td><div><p>$5.99</p></div></td>
-                        <td><div><span class="status">Mailbox</span></div></td>
-                    </tr>
-                    <tr>
-                        <td><div><p>#764657758</p></div></td>
-                        <td><div><p>23/01/19</p></div></td>
-                        <td><div><p>$5.99</p></div></td>
-                        <td><div><span class="status">Mailbox</span></div></td>
-                    </tr>
-                    <tr>
-                        <td><div><p>#764657758</p></div></td>
-                        <td><div><p>23/01/19</p></div></td>
-                        <td><div><p>$5.99</p></div></td>
-                        <td><div><span class="status">Mailbox</span></div></td>
-                    </tr>
-                </tbody>
-            </table>   
-        </div>
+        <!-- this table data shown when good width(>1000px) -->
+        <table id="table2" class="task-table">
+            <thead>
+                <tr>
+                    <th><div>Transaction ID</div></th>
+                    <th><div>Date of transaction</div></th>
+                    <th><div>Amount</div></th>
+                    <th><div>Description</div></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><div><p>#764657758</p></div></td>
+                    <td><div><p>23/01/19</p></div></td>
+                    <td><div><p>$5.99</p></div></td>
+                    <td><div><span class="status">Mailbox</span></div></td>
+                </tr>
+                <tr>
+                    <td><div><p>#764657758</p></div></td>
+                    <td><div><p>23/01/19</p></div></td>
+                    <td><div><p>$5.99</p></div></td>
+                    <td><div><span class="status">Registration (upgrade)</span></div></td>
+                </tr>
+                <tr>
+                    <td><div><p>#764657758</p></div></td>
+                    <td><div><p>23/01/19</p></div></td>
+                    <td><div><p>$5.99</p></div></td>
+                    <td><div><span class="status">Mailbox</span></div></td>
+                </tr>
+                <tr>
+                    <td><div><p>#764657758</p></div></td>
+                    <td><div><p>23/01/19</p></div></td>
+                    <td><div><p>$5.99</p></div></td>
+                    <td><div><span class="status">Mailbox</span></div></td>
+                </tr>
+                <tr>
+                    <td><div><p>#764657758</p></div></td>
+                    <td><div><p>23/01/19</p></div></td>
+                    <td><div><p>$5.99</p></div></td>
+                    <td><div><span class="status">Mailbox</span></div></td>
+                </tr>
+                <tr>
+                    <td><div><p>#764657758</p></div></td>
+                    <td><div><p>23/01/19</p></div></td>
+                    <td><div><p>$5.99</p></div></td>
+                    <td><div><span class="status">Mailbox</span></div></td>
+                </tr>
+            </tbody>
+        </table>   
+    </div>
     </main>
 </body>
 </html>
