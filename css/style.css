@@ -70,6 +70,11 @@ main{
     text-align: left;
 
 }
+
+.container1 .menuItem:hover, .dropdown-content a:hover{
+    background-color: #1A213F;
+}
+
 .dropdown-content {
     display: none; 
     /* Initially hidden */
@@ -84,30 +89,21 @@ main{
     text-decoration: none;
 }
 
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
+/* Active State: Show Dropdown */
+.menuItem.active + .dropdown-content
+{
+    display: block;
 }
 
-/* Active State: Show Dropdown */
-#orgData.active + .dropdown-content
-{
-    display: block;
-}
-#myBusines.active + .dropdown-content
-{
-    display: block;
-}
-#finance.active + .dropdown-content
-{
-    display: block;
-}
-.container1 .menuItem:hover, .dropdown-content a:hover{
-    background-color: #1A213F;
-}
 .container1 .menuItemsBottom .settingsIcon{
+    border-radius: 8px;
     position: absolute;
     right: 0;
 } 
+
+.container1 .menuItemsBottom .settingsIcon:hover{
+    background-color: #1A213F;
+}
 
 #orgData{
     height: 56px;
@@ -285,13 +281,13 @@ main{
     opacity: 0px;
 }
 #orangeLi{
-    list-style-image: url(./icons/Ellipse_orange.svg);
+    list-style-image: url(../public/icons/Ellipse_orange.svg);
 }
 #redLi{
-    list-style-image: url(./icons/Ellipse_red.svg);
+    list-style-image: url(../public/icons/Ellipse_red.svg);
 }
 #greenLi{
-    list-style-image: url(./icons/Ellipse_green.svg);
+    list-style-image: url(../public/icons/Ellipse_green.svg);
 }
 .activityBox{
     width: 100%;
@@ -376,14 +372,12 @@ main{
     margin-top: 20px;
     gap: 12px;
 }
-.container3 a{
-    
+.container3 a{   
     font-family: Inter;
     font-size: 14px;
     font-weight: 500;
     line-height: 19.6px;
     text-align: center;
-
 }
 .container3 h1{
     font-family: Inter;
@@ -417,7 +411,8 @@ main{
     align-items: center;
     justify-content: center;
 }
-.container3 img{
+#overDueData img, #assignedByMeData img{
+    padding: 10px;
     width: 100px;
     height: 100px;
 }
@@ -502,7 +497,7 @@ main{
     padding-right: 60px;  
     display: -webkit-box; /* Required for the multi-line truncation */
     -webkit-box-orient: vertical; /* Defines the box orientation as vertical */
-    -webkit-line-clamp: 3; /* Limits the text to 2 lines */
+    -webkit-line-clamp: 3; /* Limits the text to 3 lines */
     overflow: hidden; /* Hides the overflow text */
     text-overflow: ellipsis; /* Adds ellipses when text overflows */
     
@@ -633,7 +628,6 @@ main{
         line-height: 20px;
         text-align: left;
         color: #1E1F21;
-        ;
     }
     .container3 .documentData .title{
         color: #1E1F21;
@@ -642,6 +636,42 @@ main{
         line-height: 19.6px;
         text-align: left;
 
+    }
+    .container3 .paymentData{
+        margin-left: -40px !important;
+        margin-right: -16px !important;
+        padding-right: 16px;
+        padding-left: 40px;
+        gap: 24px;
+    }
+    .container3 .documentData .transactionDetails{
+        cursor: pointer !important;
+        justify-content: space-between;
+    }
+    .container3 .documentData .transactionDetails .data p{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .container3 .documentData .transactionDetails .amountData{
+        font-weight: 600;
+        width: fit-content;
+        flex-direction: row;
+        gap: 8px;
+    }
+    .container3 .documentData .transactionDetails .amountData img{
+        transform: rotate(180deg);
+        width: 16px;
+        height: 16px;
+    }
+    .container3 .documentData .statusDocument{
+        display: none;
+    }
+    .transactionDetails.active + .statusDocument{
+        display: flex;
+    }
+    .paymentData:hover{
+        background-color: #F8F9FC; 
+        
     }
     .container3 .documentData .cateogoryTitle{
         font-size: 13px;
@@ -652,7 +682,7 @@ main{
     }
     .container3 .documentData .status{
         width: fit-content;
-    }
+    }  
 }
 @media screen and (max-width: 870px){
     .container2{
@@ -662,6 +692,7 @@ main{
         width: 45% !important;
     }
 }
+
 @media screen and (max-width: 610px) {
     html{
     overflow-x: hidden;
@@ -686,7 +717,10 @@ main{
         margin-right: 0;
         overflow-y:scroll !important;
         z-index: 1000  !important;
-    }    
+    }
+    .container1 #menuIconToggle{
+        transform: rotate(180deg);
+    }   
     .mainHead{
         display: flex;
         padding-top: 46px;
@@ -719,8 +753,11 @@ main{
     }
     .container3{
         width: 100% !important;
-        padding-left: 16px !important;
-        
+        padding-left: 16px !important;   
+    }
+    .container3 .paymentData{
+        margin-left: -16px !important;
+        padding-left: 16px;
     }
     
 }
