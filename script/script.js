@@ -63,7 +63,7 @@ document.querySelectorAll('.transactionDetails').forEach((item, index) => {
 
     var paymentData = document.querySelectorAll('.paymentData');
     var icons = document.querySelectorAll('.paymentData img');
-//iterationally adding events to each transaction
+    //iterationally adding events to each transaction
     item.addEventListener('click', function() {
         if(this.classList.contains('active')){
             this.classList.remove('active')
